@@ -141,7 +141,7 @@ export default async function InventoryPage({
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                {products.map((product) => (
+                {products.map((product: any) => (
                   <tr
                     key={product.id}
                     className="hover:bg-gray-50 transition-colors text-gray-700"

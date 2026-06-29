@@ -1,4 +1,4 @@
-/*"use client";
+"use client";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -28,8 +28,14 @@ export function LoginForm() {
 
   return (
     <form onSubmit={handleLogin} className="space-y-4 p-6 border rounded">
+      <span>※下記でログイン</span>
+      <p>
+        （メールアドレス：admin@test.com）
+        <br />
+        （パスワード：password123）
+      </p>
       <input
-        placeholder="email"
+        placeholder="メールアドレス"
         className="border p-2 w-full"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
@@ -37,13 +43,13 @@ export function LoginForm() {
 
       <input
         type="password"
-        placeholder="password"
+        placeholder="パスワード"
         className="border p-2 w-full"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <button className="bg-black text-white px-4 py-2 w-full">login</button>
+      <button className="bg-black text-white px-4 py-2 w-full">ログイン</button>
     </form>
   );
-}*/
+}

@@ -66,8 +66,7 @@ export async function POST(request: Request) {
     });
     res.cookies.set("token", token, {
       httpOnly: true,
-      //secure: false,
-      secure: process.env.NODE_ENV === "production",
+      secure: false,
       path: "/",
       sameSite: "lax",
     });

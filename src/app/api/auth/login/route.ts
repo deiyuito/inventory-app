@@ -45,7 +45,7 @@ export async function POST(request: Request) {
         userId: user.id,
         email: user.email,
       },
-      process.env.JWT_SECRET || "dev_secret",
+      process.env.JWT_SECRET!,
       {
         expiresIn: "1d",
       },
@@ -61,7 +61,7 @@ export async function POST(request: Request) {
     });
     res.cookies.set("token", token, {
       httpOnly: true,
-      secure: false,
+      secure: process.env.NODE_ENV === "production",
       path: "/",
       sameSite: "lax",
     });

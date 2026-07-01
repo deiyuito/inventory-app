@@ -91,10 +91,13 @@ export default async function InventoryPage({
     <main className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-5xl mx-auto space-y-8">
         {/* ヘッダー部分 */}
-        <div className="flex justify-between items-center bg-white p-6 rounded-lg shadow-sm">
+        <div className="flex justify-between items-center bg-white p-6 rounded-lg shadow-sm min-w-[900px]">
           <div>
             {/* リセット */}
-            <Link href="/" className="text-2xl font-bold text-gray-900">
+            <Link
+              href="/"
+              className="text-2xl font-bold text-gray-900 whitespace-nowrap"
+            >
               在庫管理システム
             </Link>
             <p className="text-gray-500">
@@ -124,19 +127,27 @@ export default async function InventoryPage({
         </div>
 
         {/* 在庫一覧（本物のデータを表示！） */}
-        <div className="w-full bg-white p-6 rounded-lg shadow-sm">
+        <div className="w-full bg-white p-6 rounded-lg shadow-sm min-w-[900px]">
           <div className="flex justify-between">
-            <h2 className="text-xl font-semibold mb-4">在庫一覧</h2>
+            <h2 className="text-xl font-semibold mb-4 whitespace-nowrap">
+              在庫一覧
+            </h2>
             <Sort />
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="border-b bg-gray-50 text-sm text-gray-600">
-                  <th className="p-3 font-semibold">商品名</th>
-                  <th className="p-3 font-semibold">SKU</th>
-                  <th className="p-3 font-semibold">カテゴリ</th>
-                  <th className="p-3 font-semibold text-right">在庫数</th>
+                  <th className="p-3 font-semibold whitespace-nowrap">
+                    商品名
+                  </th>
+                  <th className="p-3 font-semibold whitespace-nowrap">SKU</th>
+                  <th className="p-3 font-semibold whitespace-nowrap">
+                    カテゴリ
+                  </th>
+                  <th className="p-3 font-semibold text-right whitespace-nowrap">
+                    在庫数
+                  </th>
                   <th className="p-3 font-semibold"></th>
                 </tr>
               </thead>

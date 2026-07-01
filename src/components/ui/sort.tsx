@@ -21,7 +21,7 @@ export function Sort() {
   return (
     <div className="flex items-center gap-2 mb-4">
       {/* カテゴリ */}
-      <h3 className="pl-5">カテゴリ:</h3>
+      <h3 className="pl-5 whitespace-nowrap">カテゴリ:</h3>
       <select
         name="category"
         defaultValue={searchParams.get("category") ?? ""}
@@ -36,7 +36,7 @@ export function Sort() {
         <option value="PC">PC</option>
       </select>
       {/* 在庫状態 */}
-      <h3 className="pl-5">在庫状況:</h3>
+      <h3 className="pl-5 whitespace-nowrap">在庫状況:</h3>
       <select
         name="stock"
         defaultValue={searchParams.get("stock") ?? ""}
@@ -48,7 +48,7 @@ export function Sort() {
         <option value="out">在庫切れ</option>
       </select>
       {/* 並び替え */}
-      <h3 className="pl-5">並び替え:</h3>
+      <h3 className="pl-5 whitespace-nowrap">並び替え:</h3>
       <select
         defaultValue={searchParams.get("sort") ?? ""}
         onChange={(e) => handleChange("sort", e.target.value)}
